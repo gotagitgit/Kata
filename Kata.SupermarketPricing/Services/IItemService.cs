@@ -5,6 +5,6 @@ namespace Kata.SupermarketPricing.Services
 {
     public interface IItemService
     {
-        double ComputeCost(IEnumerable<Item> items);
+        double ComputeCost(IEnumerable<BasketItem> items);
     }
 }

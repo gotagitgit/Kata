@@ -1,8 +1,8 @@
 ﻿namespace Kata.SupermarketPricing.Models
 {
-    public sealed class Item
+    public sealed class BasketItem
     {
-        public Item(Product product, double quantity)
+        public BasketItem(Product product, double quantity)
         {
             Product = product;
             Quantity = quantity;
@@ -12,7 +12,9 @@
 
         public double Quantity { get; }
 
-        public double ComputeItemCost()
+        public double ItemPrice => ComputeItemCost();
+
+        private double ComputeItemCost()
         {
             var priceScheme = Product.PriceScheme;
 
