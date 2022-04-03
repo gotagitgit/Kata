@@ -13,8 +13,8 @@ namespace Kata.SupermarketPricing.Repository
         {
             return new List<Product>
             {
-                new Product("Simple Product", 2.50, new SimplePriceScheme() ),
-                new Product("Apple by 3s", 1.99, new GroupOf3ItemsPriceScheme())
+                //new Product("Simple Product", 2.50, new SimplePriceScheme() ),
+                //new Product("Apple by 3s", 1.99, new BundledProductPriceScheme())
             };
         }
     }

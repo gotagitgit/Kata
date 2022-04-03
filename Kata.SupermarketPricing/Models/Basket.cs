@@ -1,17 +1,53 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections.Immutable;
 using System.Linq;
 
 namespace Kata.SupermarketPricing.Models
 {
     public sealed class Basket
     {
-        public Basket(IList<BasketItem> basketItems)
+        private Basket() : this(ImmutableList<BasketItem>.Empty)
+        {
+        }
+
+        public Basket(ImmutableList<BasketItem> basketItems)
         {
             BasketItems = basketItems;
         }
 
-        public IList<BasketItem> BasketItems { get; }
+        public static Basket Empty => new();
 
-        public double Total => BasketItems.Sum(x => x.ItemPrice);
+        public ImmutableList<BasketItem> BasketItems { get; }
+
+        public double Total => BasketItems.Sum(x => x.ItemPrice);       
+
+        public Basket AddItem(BasketItem item)
+        {
+            if (TryUpdateExistingBasketItem(item, out var basket))
+                return basket;
+
+            var updatedBasketItems = BasketItems.Add(item);
+
+            return new Basket(updatedBasketItems);
+        }
+
+        private bool TryUpdateExistingBasketItem(BasketItem item, out Basket basket)
+        {
+            basket = Basket.Empty;
+
+            var builder = BasketItems.ToBuilder();
+
+            var basketItem = builder.Find(x => x.Product.Id == item.Product.Id);
+
+            if (basketItem == null)
+                return false;
+            
+            var updatedBasketItem = basketItem.WithQuantity(item.Quantity);
+
+            var basketItems = BasketItems.Replace(basketItem, updatedBasketItem);
+
+            basket = new Basket(basketItems);
+
+            return true;            
+        }
     }
 }

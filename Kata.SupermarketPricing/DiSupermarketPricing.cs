@@ -7,7 +7,7 @@ namespace Kata.SupermarketPricing
     {
         public static void Configure(IServiceCollection serviceCollection)
         {
-            serviceCollection.AddScoped<IItemService, ItemService>();
+            serviceCollection.AddScoped<IBasketService, BasketService>();
         }
     }
 }

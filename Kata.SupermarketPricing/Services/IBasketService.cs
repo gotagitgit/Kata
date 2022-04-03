@@ -3,7 +3,7 @@ using Kata.SupermarketPricing.Models;
 
 namespace Kata.SupermarketPricing.Services
 {
-    public interface IItemService
+    public interface IBasketService
     {
         double ComputeCost(IEnumerable<BasketItem> items);
     }

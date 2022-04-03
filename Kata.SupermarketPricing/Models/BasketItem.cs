@@ -20,5 +20,10 @@
 
             return priceScheme.ComputeItemPrice(Product, Quantity);
         }
+
+        public BasketItem WithQuantity(double quantity)
+        {
+            return new BasketItem(Product, quantity + Quantity);
+        }
     }
 }

@@ -1,4 +1,4 @@
-﻿namespace Kata.SupermarketPricing.Models
+﻿namespace Kata.SupermarketPricing.Models.PriceSchemes
 {
     public interface IPriceScheme
     {
