@@ -2,6 +2,6 @@
 {
     public interface IPriceScheme
     {
-        double ComputeItemPrice(Product product, double quantity);
+        double ComputeItemPrice(Product product, ItemMeasure itemMeasure);
     }
 }

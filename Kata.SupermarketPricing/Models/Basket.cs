@@ -1,4 +1,5 @@
-﻿using System.Collections.Immutable;
+﻿using System;
+using System.Collections.Immutable;
 using System.Linq;
 
 namespace Kata.SupermarketPricing.Models
@@ -18,7 +19,7 @@ namespace Kata.SupermarketPricing.Models
 
         public ImmutableList<BasketItem> BasketItems { get; }
 
-        public double Total => BasketItems.Sum(x => x.ItemPrice);       
+        public double Total => Math.Round(BasketItems.Sum(x => x.ItemPrice), 2);       
 
         public Basket AddItem(BasketItem item)
         {

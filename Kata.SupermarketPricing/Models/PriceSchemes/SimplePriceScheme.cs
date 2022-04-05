@@ -2,9 +2,9 @@
 {
     public sealed class SimplePriceScheme : IPriceScheme
     {
-        public double ComputeItemPrice(Product product, double quantity)
+        public double ComputeItemPrice(Product product, ItemMeasure itemMeasure)
         {
-            return product.Price * quantity;
+            return product.Price * itemMeasure.Quantity;
         }
     }
 }

@@ -8,8 +8,9 @@ namespace Kata.SupermarketPricing.Models.PriceSchemes
 
         private double _price = 2;
 
-        public double ComputeItemPrice(Product product, double quantity)
+        public double ComputeItemPrice(Product product, ItemMeasure itemMeasure)
         {
+            var quantity = itemMeasure.Quantity;
 
             var bundledPrice = ComputeCostPerBundle(quantity);
 
