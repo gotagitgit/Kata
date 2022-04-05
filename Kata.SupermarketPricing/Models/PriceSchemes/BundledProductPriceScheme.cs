@@ -34,5 +34,10 @@ namespace Kata.SupermarketPricing.Models.PriceSchemes
 
             return price * perPieceQuantity;
         }
+
+        public double ComputeItemPriceWithUOM(Product product, double quantity, double uomConversion)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

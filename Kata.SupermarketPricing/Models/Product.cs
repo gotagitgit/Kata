@@ -9,11 +9,13 @@ namespace Kata.SupermarketPricing.Models
             Guid id,
             string name,
             double price,
+            string uom,
             IPriceScheme priceScheme)
         {
             Id = id;
             Name = name;
             Price = price;
+            UnitOfMeasure = uom;
             PriceScheme = priceScheme;
         }
 
@@ -22,6 +24,8 @@ namespace Kata.SupermarketPricing.Models
         public string Name { get; }
 
         public double Price { get; }
+
+        public string UnitOfMeasure { get; }
 
         public IPriceScheme PriceScheme { get; }
     }

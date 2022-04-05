@@ -6,5 +6,10 @@
         {
             return product.Price * quantity;
         }
+
+        public double ComputeItemPriceWithUOM(Product product, double quantity, double uomConversion)
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }
