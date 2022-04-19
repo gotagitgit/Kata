@@ -43,7 +43,9 @@ namespace Kata.SuperMarketCheckout.Checkouts.Models
             if (stockItem == null)
                 return false;
 
-            var updatedStockItem = stockItem.WithQuantity(item.Quantity);
+            var quantity = item.Quantity + stockItem.Quantity;
+
+            var updatedStockItem = stockItem.WithQuantity(quantity);
 
             var stockItems = StockItems.Replace(stockItem, updatedStockItem);
 
