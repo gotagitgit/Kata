@@ -18,12 +18,14 @@ namespace Kata.SuperMarketCheckout.StockPriceSchemes
         {
             services.AddScoped<IPriceSchemeFactory, PriceSchemeFactory>();
             services.AddScoped<IPricingSchemeFactory, BundledPriceSchemeFactory>();
+            services.AddScoped<IPricingSchemeFactory, BuyAndGetFreeItemsPriceSchemeFactory>();
             services.AddScoped<IStockPriceSchemeFactory, StockPriceSchemeFactory>();
         }
 
         private static void RegisterMappers(IServiceCollection services)
         {
-            services.AddScoped<IPriceSchemeDetailMapper, BundledPriceSchemeDetailMapper>();           
+            services.AddScoped<IPriceSchemeDetailMapper, BundledPriceSchemeDetailMapper>();
+            services.AddScoped<IPriceSchemeDetailMapper, BuyAndGetFreePriceSchemeDetailMapper>();
         }
 
         private static void RegisterRepositories(IServiceCollection services)

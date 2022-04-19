@@ -21,6 +21,14 @@ namespace Kata.SuperMarket.Data.DataSeeder
                         PriceScheme = 0,
                         IsActive = true,
                         PriceSchemeDetail = CreateBundledPriceScheme(2, 2.50m)
+                    },
+                    new StockPriceSchemeDto
+                    {
+                        Id = Guid.NewGuid(),
+                        StockId = new Guid("cdb45229-2b4e-4ce1-be35-8ddc092cb1d3"),
+                        PriceScheme = 1,
+                        IsActive = true,
+                        PriceSchemeDetail = CreateBuyAndGetFreePriceScheme(2, 1)
                     }
                 };
 
@@ -35,6 +43,15 @@ namespace Kata.SuperMarket.Data.DataSeeder
 <PriceSchemeDetail>
 	<CountPerBundle>{countPerBundle}</CountPerBundle>
 	<Price>{price}</Price>
+</PriceSchemeDetail>";
+        }
+
+        private static string CreateBuyAndGetFreePriceScheme(int pricedItemCount, int freeItemCount)
+        {
+            return $@"
+<PriceSchemeDetail>
+	<PricedItemCount>{pricedItemCount}</PricedItemCount>
+	<FreeItemCount>{freeItemCount}</FreeItemCount>
 </PriceSchemeDetail>";
         }
     }

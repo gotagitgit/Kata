@@ -6,6 +6,6 @@ namespace Kata.SuperMarketCheckout.StockPriceSchemes.Mappers
     {
         PriceScheme PriceScheme { get; }
 
-        BundledPriceSchemeDetail ToDetail(string xml);
+        IPriceSchemeDetail ToDetail(string xml);
     }
 }

@@ -16,7 +16,7 @@ namespace Kata.SuperMarketCheckout.Api.Mappers.Checkouts
 
         public CheckoutDto ToDto(Checkout checkout)
         {
-            var stockItems = checkout.StockItems.Select(x => ToDto(x.Stock)).ToList();
+            var stockItems = checkout.StockItems.Select(ToDto).ToList();
 
             return new CheckoutDto
             {
@@ -25,13 +25,16 @@ namespace Kata.SuperMarketCheckout.Api.Mappers.Checkouts
             };
         }
 
-        private static StockItemDto ToDto(Stock stock)
+        private static StockItemDto ToDto(StockItem stockItem)
         {
+            var stock = stockItem.Stock;
+
             return new StockItemDto
             {
                 Id = stock.Id,
                 Name = stock.Name,
                 Price = stock.Price,
+                Quantity = stockItem.Quantity,
                 Uom = stock.Uom,
             };
         }

@@ -15,7 +15,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Kata.SuperMarket.Data", "Ka
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DevSetup", "DevSetup\DevSetup.csproj", "{717EB757-9705-4B42-A64C-6A56A8940999}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kata.SuperMarketCheckout.Api", "Kata.SuperMarketCheckout.Api\Kata.SuperMarketCheckout.Api.csproj", "{63F8E594-9C80-44F0-AEE8-714AD4E68BEF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Kata.SuperMarketCheckout.Api", "Kata.SuperMarketCheckout.Api\Kata.SuperMarketCheckout.Api.csproj", "{63F8E594-9C80-44F0-AEE8-714AD4E68BEF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Checkouts", "Checkouts", "{EDC24032-08B8-410C-8854-3BF0FD5AB06B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Pricing", "Pricing", "{DA391057-CEAF-4C18-BC8A-9B143755F465}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -54,6 +58,14 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{0FBAB921-5ACD-425E-811C-2AC6F5CBEDE9} = {DA391057-CEAF-4C18-BC8A-9B143755F465}
+		{D7FAF4C4-0944-48E3-BA01-EBB491DB64E1} = {DA391057-CEAF-4C18-BC8A-9B143755F465}
+		{2BDB479B-C455-4367-8BC9-CE91940F7B8D} = {DA391057-CEAF-4C18-BC8A-9B143755F465}
+		{86BED81E-BB78-4335-9348-DE482070A62A} = {EDC24032-08B8-410C-8854-3BF0FD5AB06B}
+		{884A9C33-C8DB-4118-A21C-52320B270685} = {EDC24032-08B8-410C-8854-3BF0FD5AB06B}
+		{63F8E594-9C80-44F0-AEE8-714AD4E68BEF} = {EDC24032-08B8-410C-8854-3BF0FD5AB06B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7CE7F997-8950-460C-9FCE-29B477845CA4}

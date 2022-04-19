@@ -7,7 +7,7 @@ namespace Kata.SuperMarketCheckout.StockPriceSchemes.Mappers
     {
         public PriceScheme PriceScheme => PriceScheme.Bundled;
 
-        public BundledPriceSchemeDetail ToDetail(string xml)
+        public IPriceSchemeDetail ToDetail(string xml)
         {
             var detail = string.IsNullOrWhiteSpace(xml) ? null : XElement.Parse(xml);
 
