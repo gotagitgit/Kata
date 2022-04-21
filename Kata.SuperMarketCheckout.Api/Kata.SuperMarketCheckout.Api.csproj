@@ -14,5 +14,9 @@
     <ProjectReference Include="..\Kata.SuperMarket.Data\Kata.SuperMarket.Data.csproj" />
     <ProjectReference Include="..\Kata.SuperMarketCheckout\Kata.SuperMarketCheckout.csproj" />
   </ItemGroup>
+  
+  <ItemGroup>
+    <InternalsVisibleTo Include="$(AssemblyName).Tests" />
+  </ItemGroup>
 
 </Project>
