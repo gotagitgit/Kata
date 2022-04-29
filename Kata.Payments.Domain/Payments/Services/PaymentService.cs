@@ -3,32 +3,32 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Kata.Payments.Domain.Payments.Factory;
-using Kata.Payments.Domain.Payments.Models;
+using Kata.Payments.Domain.Products.Factory;
+using Kata.Payments.Domain.Products.Models;
+using Kata.Payments.Domain.Products.Repository;
 
-namespace Kata.Payments.Domain.Payments.Services
+namespace Kata.Payments.Domain.Products.Services
 {
     public sealed class PaymentService
     {
-        private readonly IPaymentRuleFactory _paymentRuleFactory;
+        private readonly IProductRepository _productRepository;
 
-        public PaymentService(IPaymentRuleFactory paymentRuleFactory)
+        public PaymentService(
+            IProductRepository productRepository)
         {
-            _paymentRuleFactory = paymentRuleFactory;
+            _productRepository = productRepository;
         }
 
-        public void ProcessPayment(Guid id)
+        public async Task ProcessPaymentAsync(Guid id)
         {
-            // call repo to get product by id
+            var product = await _productRepository.FindAsync(id);
 
-            var product = new Product(Guid.NewGuid(), "", ProductType.Physical, ProductCategory.Book, new List<PaymentRule>());
+            //foreach (var item in product.PaymentRules)
+            //{
+            //    var paymentRule = _paymentRuleFactory.Create(item);
 
-            foreach (var item in product.PaymentRules)
-            {
-                var paymentRule = _paymentRuleFactory.Create(item);
-
-                paymentRule.ExecuteRule(product);
-            }
+            //    paymentRule.ExecuteRule(product);
+            //}
         }
     }
 }

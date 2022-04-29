@@ -8,4 +8,12 @@
     <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="6.0.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Kata.Payments.Data\Kata.Payments.Data.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Products\Services\" />
+  </ItemGroup>
+
 </Project>

@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Kata.Payments.Domain.Payments.Models;
+using Kata.Payments.Domain.Products.Models;
 
-namespace Kata.Payments.Domain.Payments.Services
+namespace Kata.Payments.Domain.Products.Services
 {
     public sealed class ShippingService : IShippingService
     {
