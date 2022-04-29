@@ -27,7 +27,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Kata.SuperMarketCheckout.Ap
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Payments", "Payments", "{B5C1E367-7B08-4579-9FF0-75B5CB09A43B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kata.Payments.Domain", "Kata.Payments.Domain\Kata.Payments.Domain.csproj", "{EE761FEF-8527-41DC-9A35-05EAA349043A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Kata.Payments.Domain", "Kata.Payments.Domain\Kata.Payments.Domain.csproj", "{EE761FEF-8527-41DC-9A35-05EAA349043A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kata.Payments.Data", "Kata.Payments.Data\Kata.Payments.Data.csproj", "{D982FA8C-D5EC-4110-BE2B-2E9438BEB83E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -71,6 +73,10 @@ Global
 		{EE761FEF-8527-41DC-9A35-05EAA349043A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EE761FEF-8527-41DC-9A35-05EAA349043A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EE761FEF-8527-41DC-9A35-05EAA349043A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D982FA8C-D5EC-4110-BE2B-2E9438BEB83E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D982FA8C-D5EC-4110-BE2B-2E9438BEB83E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D982FA8C-D5EC-4110-BE2B-2E9438BEB83E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D982FA8C-D5EC-4110-BE2B-2E9438BEB83E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -84,6 +90,7 @@ Global
 		{63F8E594-9C80-44F0-AEE8-714AD4E68BEF} = {EDC24032-08B8-410C-8854-3BF0FD5AB06B}
 		{A2AEA8CC-CCA4-4598-ACA5-5202B509FE1E} = {AF80E082-DBD5-4B1F-AA0D-0748416CB588}
 		{EE761FEF-8527-41DC-9A35-05EAA349043A} = {B5C1E367-7B08-4579-9FF0-75B5CB09A43B}
+		{D982FA8C-D5EC-4110-BE2B-2E9438BEB83E} = {B5C1E367-7B08-4579-9FF0-75B5CB09A43B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7CE7F997-8950-460C-9FCE-29B477845CA4}

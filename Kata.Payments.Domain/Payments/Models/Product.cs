@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Kata.Payments.Domain.Payments.Services;
 
 namespace Kata.Payments.Domain.Payments.Models
@@ -32,22 +29,23 @@ namespace Kata.Payments.Domain.Payments.Models
 
     public enum ProductType
     {
-        Physical,
-        NonPhysical        
+        Physical = 1,
+        NonPhysical = 2       
     }
 
     public enum ProductCategory
     {
-        Book,
-        Membership,
-        Video
+        Generic = 0,
+        Book = 1,
+        Membership = 2,
+        Video = 3,
     }
 
     public enum PaymentRule
     {
-        NewMemberShipRule,
-        UpgradeMemberShipRule,
-        PackingSlip
+        NewMemberShipRule = 1,
+        UpgradeMemberShipRule = 2,
+        PackingSlip = 3
     }
 
     public sealed class BookPaymentRule
