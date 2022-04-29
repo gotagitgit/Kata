@@ -1,13 +1,29 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.32228.343
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32328.378
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Kata.Main", "Kata.Main\Kata.Main.csproj", "{0FBAB921-5ACD-425E-811C-2AC6F5CBEDE9}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Kata.SupermarketPricing", "Kata.SupermarketPricing\Kata.SupermarketPricing.csproj", "{D7FAF4C4-0944-48E3-BA01-EBB491DB64E1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kata.SuperMarketPricing.Tests", "Kata.SuperMarketPricing.Tests\Kata.SuperMarketPricing.Tests.csproj", "{2BDB479B-C455-4367-8BC9-CE91940F7B8D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Kata.SuperMarketPricing.Tests", "Kata.SuperMarketPricing.Tests\Kata.SuperMarketPricing.Tests.csproj", "{2BDB479B-C455-4367-8BC9-CE91940F7B8D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Kata.SuperMarketCheckout", "Kata.SuperMarketCheckout\Kata.SuperMarketCheckout.csproj", "{86BED81E-BB78-4335-9348-DE482070A62A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Kata.SuperMarket.Data", "Kata.SuperMarket.Data\Kata.SuperMarket.Data.csproj", "{884A9C33-C8DB-4118-A21C-52320B270685}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DevSetup", "DevSetup\DevSetup.csproj", "{717EB757-9705-4B42-A64C-6A56A8940999}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Kata.SuperMarketCheckout.Api", "Kata.SuperMarketCheckout.Api\Kata.SuperMarketCheckout.Api.csproj", "{63F8E594-9C80-44F0-AEE8-714AD4E68BEF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Checkouts", "Checkouts", "{EDC24032-08B8-410C-8854-3BF0FD5AB06B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Pricing", "Pricing", "{DA391057-CEAF-4C18-BC8A-9B143755F465}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{AF80E082-DBD5-4B1F-AA0D-0748416CB588}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Kata.SuperMarketCheckout.Api.Tests", "Kata.SuperMarketCheckout.Api.Tests\Kata.SuperMarketCheckout.Api.Tests.csproj", "{A2AEA8CC-CCA4-4598-ACA5-5202B509FE1E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,9 +43,38 @@ Global
 		{2BDB479B-C455-4367-8BC9-CE91940F7B8D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2BDB479B-C455-4367-8BC9-CE91940F7B8D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2BDB479B-C455-4367-8BC9-CE91940F7B8D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{86BED81E-BB78-4335-9348-DE482070A62A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{86BED81E-BB78-4335-9348-DE482070A62A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{86BED81E-BB78-4335-9348-DE482070A62A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{86BED81E-BB78-4335-9348-DE482070A62A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{884A9C33-C8DB-4118-A21C-52320B270685}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{884A9C33-C8DB-4118-A21C-52320B270685}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{884A9C33-C8DB-4118-A21C-52320B270685}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{884A9C33-C8DB-4118-A21C-52320B270685}.Release|Any CPU.Build.0 = Release|Any CPU
+		{717EB757-9705-4B42-A64C-6A56A8940999}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{717EB757-9705-4B42-A64C-6A56A8940999}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{717EB757-9705-4B42-A64C-6A56A8940999}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{717EB757-9705-4B42-A64C-6A56A8940999}.Release|Any CPU.Build.0 = Release|Any CPU
+		{63F8E594-9C80-44F0-AEE8-714AD4E68BEF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63F8E594-9C80-44F0-AEE8-714AD4E68BEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63F8E594-9C80-44F0-AEE8-714AD4E68BEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63F8E594-9C80-44F0-AEE8-714AD4E68BEF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A2AEA8CC-CCA4-4598-ACA5-5202B509FE1E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A2AEA8CC-CCA4-4598-ACA5-5202B509FE1E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A2AEA8CC-CCA4-4598-ACA5-5202B509FE1E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A2AEA8CC-CCA4-4598-ACA5-5202B509FE1E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{0FBAB921-5ACD-425E-811C-2AC6F5CBEDE9} = {DA391057-CEAF-4C18-BC8A-9B143755F465}
+		{D7FAF4C4-0944-48E3-BA01-EBB491DB64E1} = {DA391057-CEAF-4C18-BC8A-9B143755F465}
+		{2BDB479B-C455-4367-8BC9-CE91940F7B8D} = {DA391057-CEAF-4C18-BC8A-9B143755F465}
+		{86BED81E-BB78-4335-9348-DE482070A62A} = {EDC24032-08B8-410C-8854-3BF0FD5AB06B}
+		{884A9C33-C8DB-4118-A21C-52320B270685} = {EDC24032-08B8-410C-8854-3BF0FD5AB06B}
+		{63F8E594-9C80-44F0-AEE8-714AD4E68BEF} = {EDC24032-08B8-410C-8854-3BF0FD5AB06B}
+		{A2AEA8CC-CCA4-4598-ACA5-5202B509FE1E} = {AF80E082-DBD5-4B1F-AA0D-0748416CB588}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7CE7F997-8950-460C-9FCE-29B477845CA4}
