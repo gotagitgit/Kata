@@ -4,7 +4,7 @@ using Kata.Payments.Domain.ProductPaymentRules.Models;
 
 namespace Kata.Payments.Domain.Products.Models
 {
-    public sealed class Product
+    public class Product
     {
         public Product(
             Guid id,
